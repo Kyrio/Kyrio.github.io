@@ -1,0 +1,45 @@
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    background-color: #fafafa;
+    color: #333333;
+}
+
+h1 {
+    font-family: 'Vollkorn', serif;
+    font-weight: 400;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.card {
+    max-width: 40rem;
+    margin: auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.card-text-left {
+    flex: 1;
+    padding: 2rem 4rem 2rem 0;
+    margin-right: auto;
+}
+
+.card-center {
+    margin: auto;
+}
+
+.left-text p {
+    text-align: justify;
+}
+
+u {
+    text-decoration: underline;
+}
