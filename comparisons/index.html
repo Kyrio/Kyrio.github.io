@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Twilight Princess quality comparison</title>
+</head>
+<body>
+    <main>
+        <aside>
+            <form id="picker" autocomplete="off">
+                <h1>Signal</h1>
+                <p>
+                    <input type="radio" name="signal" id="480p" value="progressive" checked>
+                    <label for="480p">Swiss 480p (NTSC)</label>
+                    <br>
+                    <input type="radio" name="signal" id="480i" value="interlaced">
+                    <label for="480i">Native 480i (PAL)</label>
+                </p>
+                
+                <h1>Cable</h1>
+                <p>
+                    <input type="radio" name="cable" id="component" value="component" checked>
+                    <label for="component">Component</label>
+                    <br>
+                    <input type="radio" name="cable" id="hdmi" value="hdmi">
+                    <label for="hdmi">Wii2HDMI</label>
+                </p>
+            </form>
+            <p>All versions tested on a Wii</p>
+        </aside>
+        <article>
+            <img src="images/480i_component.png" alt="480i over component" class="interlaced component">
+            <img src="images/480p_component.png" alt="480p over component" class="progressive component visible">
+            <img src="images/480i_hdmi.png" alt="480i over HDMI" class="interlaced hdmi">
+            <img src="images/480p_hdmi.png" alt="480p over HDMI" class="progressive hdmi">
+        </article>
+    </main>
+
+    <script>
+        function updateImage() {
+            document.querySelector("img.visible").classList.remove("visible");
+            document.querySelector("img." + picker.elements.signal.value + "." + picker.elements.cable.value).classList.add("visible");
+        }
+
+        const picker = document.getElementById("picker");
+        
+        for (const radio of picker.elements) {
+            radio.addEventListener("input", updateImage);
+        }
+    </script>
+</body>
+</html>

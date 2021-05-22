@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Segoe UI', sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+aside {
+    margin: 1rem;
+}
+
+h1 {
+    margin-bottom: .5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+article {
+    flex: 1;
+}
+
+article img {
+    visibility: hidden;
+    position: absolute;
+}
+
+img.visible {
+    visibility: visible;
+}
